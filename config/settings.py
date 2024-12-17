@@ -2,6 +2,7 @@ from pathlib import Path
 
 LOGIN_REDIRECT_URL = '/main_no_role_page/'
 LOGOUT_REDIRECT_URL = '/login/'
+AUTH_USER_MODEL = 'users.User'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
