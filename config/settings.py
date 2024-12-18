@@ -1,6 +1,6 @@
 from pathlib import Path
 
-LOGIN_REDIRECT_URL = '/main_no_role_page/'
+LOGIN_REDIRECT_URL = '/tasks/role-redirect/'  # Редирект после успешного входа
 LOGOUT_REDIRECT_URL = '/login/'
 AUTH_USER_MODEL = 'users.User'
 

@@ -1,0 +1,9 @@
+<h1>Задачи всех пользователей</h1>
+<ul>
+    {% for task in tasks %}
+        <li>{{ task.id }} - {{ task.status }} - {{ task.comment }}</li>
+    {% empty %}
+        <li>Нет задач.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'logout' %}">Выйти</a>

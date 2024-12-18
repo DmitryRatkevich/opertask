@@ -1,9 +1,18 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<!-- Кнопка логаута -->
-<a href="" class="btn btn-warning" data-toggle="modal" data-target="#logoutModal">Logout</a>
+<h1>Мои задачи</h1>
+<ul>
+    {% for task in tasks %}
+        <li>{{ task.id }} - {{ task.status }} - {{ task.comment }}</li>
+    {% empty %}
+        <li>Нет задач.</li>
+    {% endfor %}
+</ul>
 
+
+<!-- Кнопка логаута -->
+<a href="" class="btn btn-warning" data-toggle="modal" data-target="#logoutModal">Выйти</a>
 <!-- Модальное окно для подтверждения -->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
      aria-hidden="true">
@@ -23,4 +32,7 @@
         </div>
     </div>
 </div>
+
+
+
 {% endblock %}
